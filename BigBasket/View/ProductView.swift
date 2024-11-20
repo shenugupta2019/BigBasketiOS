@@ -79,14 +79,37 @@ struct ProductView: View {
     let item: Category
     
     var body: some View {
-        VStack {
-            Text("Detail for \(item)")
-                .font(.largeTitle)
-                .padding()
-            Text("Here you can show more information about the selected item.")
-                .padding()
+//            NavigationView {
+                    // Full-screen background
+            List(item.products) { product in
+                        HStack {
+                            Image(product.imageUrl)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 50, height: 50)
+                                .clipShape(Circle())
+                                .shadow(radius: 3)
+                                .background(Color.clear)
+                            
+                            VStack(alignment: .leading) {
+                                Text(product.name)
+                                    .font(.headline)
+                                Text(String(format: "$%.2f", product.price))
+                                    .font(.subheadline)
+                                    .foregroundColor(.secondary)
+                                   
+                            } .background(Color.clear)
+                        }
+                       // .padding(.vertical, 18)
+                       
+                
+            } .listStyle(PlainListStyle())
+            .background(Color.clear)
         }
-        .navigationTitle(item.name) // Title of the detail view
-    }
+//                .navigationTitle("Products")
+//                .background(Color.yellow)
+            //}
+        
 }
+
 
