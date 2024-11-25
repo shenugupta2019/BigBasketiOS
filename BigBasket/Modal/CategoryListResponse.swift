@@ -8,6 +8,6 @@
 import Foundation
 
 struct CategoryListResponse: Decodable {
-    let categories: [Category]
+    var categories: [Category]
 }
 

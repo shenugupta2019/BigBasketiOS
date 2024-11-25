@@ -8,9 +8,9 @@
 import Foundation
 
 struct Category: Decodable,Identifiable {
-    let id: String
-    let name: String
-    let products: [Product]
+    var id: String
+    var name: String
+    var products: [Product]
 }
 
 

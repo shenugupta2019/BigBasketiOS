@@ -8,35 +8,40 @@
 import SwiftUI
 
 struct CategoryView: View {
-    
+    @StateObject private var quantityManager = QuantityManager()
     @StateObject var viewModel = ProductViewModal()
     @State private var categories: [Category] = []
     
     
     var body: some View {
         NavigationView {
-            List(categories) { category in
-                NavigationLink(destination: ProductView(item: category)) {
-                VStack(alignment: .leading) {
-                    Text(category.id).font(.headline)
-                    Text("\(category.name)").font(.subheadline)
-                    // NavigationLink to the detail page when an item is tapped
-                                
-                                    
-                                   }
+            List(categories.indices, id: \.self) { index in
+                
+                        NavigationLink(
+                            destination: ProductView(
+                                category: $categories[index],
+                                quantityManager: quantityManager
+                            )
+                        ) {
+                          //  Text("Category 1").foregroundColor(.black)
+                           
+                            Text(categories[index].id).font(.headline)
+                            Text("\(categories[index].name)").font(.subheadline)
+                        }
+                    
                 }
-            }
-            .onAppear {
-                if let loadedPeople: CategoryListResponse = viewModel.loadJSONFromBundle("products") {
-                    self.categories = loadedPeople.categories
+                
+                .onAppear {
+                    print("categories loaded")
+                    if let loadedPeople: CategoryListResponse = viewModel.loadJSONFromBundle("products") {
+                        self.categories = loadedPeople.categories
+                        print("categories loaded",categories[0])
+                    }
                 }
-            }
-        }.navigationTitle("Category View")
-     }
+            }.navigationTitle("Category View")
+        }
     }
-    
-    
-   
+
 
 
 #Preview {
