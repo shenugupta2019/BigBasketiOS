@@ -4,7 +4,7 @@ import SwiftUI
 // Product View
 struct ProductView: View {
     @Binding var category: Category
-    @ObservedObject var quantityManager: QuantityManager
+    @EnvironmentObject var quantityManager: NewQuantityManager
 
     var body: some View {
         List {
@@ -24,7 +24,7 @@ struct ProductView: View {
             // Synchronize quantities when the view appears
             // Update `QuantityManager` with quantities from `Category`
                        for product in category.products {
-                           quantityManager.updateQuantity(for: product.id, to: product.quantity)
+                           quantityManager.updateProductQuantity(for: product.id, quantity: product.quantity)
                        }
         }
         .onDisappear {

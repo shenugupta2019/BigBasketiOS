@@ -3,7 +3,7 @@ import SwiftUI
 
 // Quantity Selector View
 struct QuantitySelectorView: View {
-    @ObservedObject var quantityManager: QuantityManager
+    @ObservedObject var quantityManager: NewQuantityManager
     @Binding var item: Product
     
     var body: some View {
@@ -15,7 +15,7 @@ struct QuantitySelectorView: View {
                 .onTapGesture {
                     if item.quantity > 0 {
                         item.quantity -= 1
-                        quantityManager.updateQuantity(for: item.id, to: item.quantity)
+                        quantityManager.updateProductQuantity(for: item.id, quantity: item.quantity)
                     }
                 }
             
@@ -29,9 +29,8 @@ struct QuantitySelectorView: View {
                 .cornerRadius(8)
                 .onTapGesture {
                     item.quantity += 1
-                    quantityManager.updateQuantity(for: item.id, to: item.quantity)
+                    quantityManager.updateProductQuantity(for: item.id, quantity: item.quantity)
                 }
-            
         }
     }
 }

@@ -28,6 +28,10 @@
 		472C0AD92CD8E5ED004ECA9C /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 472C0AD82CD8E5ED004ECA9C /* CategoryView.swift */; };
 		47CED5F62CEE1AE700440F97 /* QuantitySelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CED5F52CEE1AE700440F97 /* QuantitySelectorView.swift */; };
 		47CED5F82CF448B300440F97 /* QuantityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CED5F72CF448B300440F97 /* QuantityManager.swift */; };
+		47CED6002CF5CF0700440F97 /* NewProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CED5FF2CF5CF0700440F97 /* NewProduct.swift */; };
+		47CED6022CF5CF2E00440F97 /* NewQuantityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CED6012CF5CF2E00440F97 /* NewQuantityManager.swift */; };
+		47CED6042CF5CF7300440F97 /* NewCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CED6032CF5CF7300440F97 /* NewCategoryView.swift */; };
+		47CED6062CF5CF8E00440F97 /* NewProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47CED6052CF5CF8E00440F97 /* NewProductView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		472C0AD82CD8E5ED004ECA9C /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		47CED5F52CEE1AE700440F97 /* QuantitySelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantitySelectorView.swift; sourceTree = "<group>"; };
 		47CED5F72CF448B300440F97 /* QuantityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuantityManager.swift; sourceTree = "<group>"; };
+		47CED5FF2CF5CF0700440F97 /* NewProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProduct.swift; sourceTree = "<group>"; };
+		47CED6012CF5CF2E00440F97 /* NewQuantityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuantityManager.swift; sourceTree = "<group>"; };
+		47CED6032CF5CF7300440F97 /* NewCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCategoryView.swift; sourceTree = "<group>"; };
+		47CED6052CF5CF8E00440F97 /* NewProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewProductView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +209,8 @@
 				472C0AC42CD0B0ED004ECA9C /* CategoryListResponse.swift */,
 				472C0AC92CD0B7A8004ECA9C /* ProductListResponse.swift */,
 				47CED5F72CF448B300440F97 /* QuantityManager.swift */,
+				47CED5FF2CF5CF0700440F97 /* NewProduct.swift */,
+				47CED6012CF5CF2E00440F97 /* NewQuantityManager.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -220,6 +230,8 @@
 				472C0AD02CD0C194004ECA9C /* ProductView.swift */,
 				472C0AD82CD8E5ED004ECA9C /* CategoryView.swift */,
 				47CED5F52CEE1AE700440F97 /* QuantitySelectorView.swift */,
+				47CED6032CF5CF7300440F97 /* NewCategoryView.swift */,
+				47CED6052CF5CF8E00440F97 /* NewProductView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,11 +385,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				472C0AD12CD0C194004ECA9C /* ProductView.swift in Sources */,
+				47CED6062CF5CF8E00440F97 /* NewProductView.swift in Sources */,
 				472C0AC12CD0B082004ECA9C /* ProductResponse.swift in Sources */,
 				470334562CD9DFDA0010404C /* TabView.swift in Sources */,
 				472C0AD92CD8E5ED004ECA9C /* CategoryView.swift in Sources */,
 				472C0ACA2CD0B7A8004ECA9C /* ProductListResponse.swift in Sources */,
 				472C0ABF2CD0B065004ECA9C /* Product.swift in Sources */,
+				47CED6002CF5CF0700440F97 /* NewProduct.swift in Sources */,
 				47CED5F62CEE1AE700440F97 /* QuantitySelectorView.swift in Sources */,
 				472C0AC52CD0B0ED004ECA9C /* CategoryListResponse.swift in Sources */,
 				472C0AC82CD0B47F004ECA9C /* CategoryService.swift in Sources */,
@@ -386,7 +400,9 @@
 				472C0A962CD0AFAD004ECA9C /* ContentView.swift in Sources */,
 				472C0A942CD0AFAD004ECA9C /* BigBasketApp.swift in Sources */,
 				47CED5F82CF448B300440F97 /* QuantityManager.swift in Sources */,
+				47CED6022CF5CF2E00440F97 /* NewQuantityManager.swift in Sources */,
 				472C0ACE2CD0B82C004ECA9C /* ProductService.swift in Sources */,
+				47CED6042CF5CF7300440F97 /* NewCategoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

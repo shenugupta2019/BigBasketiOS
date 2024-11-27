@@ -12,6 +12,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationView {
+          //  NewCategoryView()
             CategoryView()
                        .navigationTitle("Settings")  // Title for the navigation bar
                }
@@ -20,12 +21,25 @@ struct HomeView: View {
 }
 
 struct SearchView: View {
+    @EnvironmentObject var quantityManager: NewQuantityManager
+
     var body: some View {
-        VStack {
-            Text("Search View")
-                .font(.largeTitle)
-        }
-    }
+           NavigationView {
+               List {
+                   ForEach(quantityManager.products) { product in
+                       HStack {
+                           Text(product.name)
+                           Spacer()
+                           Text("Qty: \(product.quantity)")
+                       }
+                   }
+               }
+               .navigationTitle("Products")
+           } .onAppear {
+               // Ensure the products are synced when the Search tab appears
+               quantityManager.syncProducts()
+           }
+       }
 }
 
 struct ProfileView: View {
