@@ -26,7 +26,7 @@ struct SearchView: View {
     var body: some View {
            NavigationView {
                List {
-                   ForEach(quantityManager.products) { product in
+                   ForEach(quantityManager.products.filter { $0.quantity > 0 }) { product in
                        HStack {
                            Text(product.name)
                            Spacer()
@@ -38,6 +38,7 @@ struct SearchView: View {
            } .onAppear {
                // Ensure the products are synced when the Search tab appears
                quantityManager.syncProducts()
+               print("Products after sync: \(quantityManager.products.count)")
            }
        }
 }

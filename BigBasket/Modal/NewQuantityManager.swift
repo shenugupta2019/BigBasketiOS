@@ -43,6 +43,7 @@ class NewQuantityManager: ObservableObject {
                 }
             }
         }
+        syncProducts()
     }
     
     // Sync products when switching tabs

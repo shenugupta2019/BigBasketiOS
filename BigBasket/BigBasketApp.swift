@@ -37,11 +37,11 @@ struct BigBasketApp: App {
                 
             }
             .environmentObject(quantityManager)
-            .onChange(of: selectedTab) {
-                if selectedTab == 1 {
-                    quantityManager.refreshProducts()
-                }
-            }
+//            .onChange(of: selectedTab) {
+//                if selectedTab == 1 {
+//                    quantityManager.refreshProducts()
+//                }
+//            }
             //            NavigationView{
             //                CategoryView()
             //            }
